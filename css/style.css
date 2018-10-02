@@ -157,7 +157,7 @@ blockquote::before,
 blockquote::after {
   font-weight: 400;
   font-size: 80px;
-  color: rgba({{ site.theme-color }}, .4);
+  color: rgba({{ site.theme-color }}, .7);
   display: block;
   text-align: center;
   vertical-align: bottom;
@@ -270,7 +270,7 @@ header::after {
   font-size: 60px;
   display: block;
   text-align: center;
-  color: rgba({{ site.theme-color }}, 0.4);
+  color: rgba({{ site.theme-color }}, 0.7);
 }
 article:last-of-type::after {
   content: "";
@@ -307,6 +307,8 @@ input[type="submit"] {
   cursor: pointer;
 }
 .pagination {
+  display: flex;
+  justify-content: space-between;
   margin-top: -30px;
   font-family: "Source Sans Pro", Verdana, sans-serif;
   font-weight: 600;
@@ -319,11 +321,14 @@ input[type="submit"] {
 .pagination .disabled {
   color: rgba({{ site.text-color }},.1);
 }
+.pagination .active {
+  color: rgba({{ site.theme-color }});
+}
 .pagination .left {
-  float: left;
+  /*float: left;*/
 }
 .pagination .right {
-  float: right;
+  /*float: right;*/
 }
 #disqus_thread {
   margin-bottom: 50px;
